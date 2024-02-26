@@ -21,7 +21,9 @@ app.use((req, res, next) => {
   );
   next();
 });
+
 //configure database and mongoose
+mongoose.set('strictQuery', false);
 mongoose
   .connect(database, { useNewUrlParser: true }, { useUnifiedTopology: true })
   .then(() => {
