@@ -43,7 +43,7 @@ app.use("/comments", commentRoutes);
 app.use("/projects", projectRoutes);
 // Pdf route that will serve pdf
 app.get("/pdf", (req, res) => {
-  var file = fs.createReadStream("./images/resume.pdf");
+  var file = fs.createReadStream("./resume.pdf");
   file.pipe(res);
 });
 // define first route
